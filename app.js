@@ -31,9 +31,10 @@ app.get('/', function(request, response) {
     async function generatePdf() {
         let data = {};
         getTemplateHtml().then(async(res) => {
-            // Now we have the html code of our template in res object
-            // you can check by logging it on console
-            // console.log(res)
+            const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
+                // Now we have the html code of our template in res object
+                // you can check by logging it on console
+                // console.log(res)
             console.log("Compiing the template with handlebars")
             const template = hb.compile(res, { strict: true });
             // we have compile our code with handlebars
@@ -45,7 +46,9 @@ app.get('/', function(request, response) {
             const page = await browser.newPage()
                 // We set the page content as the generated html by handlebars
             await page.setContent(html)
-                // We use pdf function to generate the pdf in the same folder as this file.
+            await delay(2000) /// waiting 1 second.
+
+            // We use pdf function to generate the pdf in the same folder as this file.
             await page.pdf({ path: 'orderhtml.pdf', format: 'A4' })
             await browser.close();
             console.log("PDF Generated")

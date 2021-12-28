@@ -1,153 +1,744 @@
-<!DOCTYPE html><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Welcome to xClaim</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap"><style type="text/css">body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    width: 95%;
-    margin: 0 auto;
-    font-family: 'Poppins', sans-serif; }
-  
-  .headerFlex {
-    display: flex;
-    justify-content: space-between;
-    background-color: #08b89a; }
-  
-  .generateReport {
-    padding-right: 10px;
-    color: white; }
-  
-  .numberHeading {
-    padding-left: 10px;
-    color: white; }
-  
-  .imageLogo {
-    width: 200px;
-    height: 50px; }
-  
-  .mainContantDiv {
-    display: flex;
-    background-color: #f6f6f6;
-    height: 175px; }
-  
-  .flexableDiv {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%; }
-  
-  .phoneEmail {
-    display: flex;
-    justify-content: space-around; }
-  
-  .phoneEmail p {
-    line-height: 0px; }
-  
-  .emailHanlde {
-    margin-left: 10px; }
-  
-  .addressHanlde {
-    line-height: 0px; }
-  
-  .codeImageBox {
-    width: 20%;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  
-  .codeImage {
-    width: 100px;
-    height: 100px;
-    margin-top: 30px; }
-  
-  .scanPara {
-    margin-top: 0 !important; }
-  
-  .headingReport {
-    text-align: center; }
-  
-  .policyDetail {
-    width: 100%;
-    margin: 0 auto; }
-  
-  .headPolicy {
-    color: #08b89a;
-    margin-bottom: 5px;
-    margin-left: 10px; }
-  
-  .policyMainDiv {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap; }
-  
-  .itemDiv {
-    margin: 0 10px;
-    width: 18%; }
-  
-  .nameDetail {
-    color: gray;
-    line-height: 0px; }
-  
-  .tableBox {
-    border: 1px solid #d6cdcd;
-    border-collapse: collapse;
-    width: 100%; }
-  
-  .titleTable {
-    height: 50px;
-    font-size: small;
-    border: 1px solid #d6cdcd top bottom;
-    text-align: left;
-    padding-left: 5px; }
-  
-  .dataTable {
-    height: 50px;
-    font-size: small;
-    border: 1px solid #d6cdcd top bottom;
-    padding-left: 5px; }
-  
-  .dataTableSec {
-    height: 50px;
-    font-size: small;
-    border: 1px solid #d6cdcd top bottom;
-    text-align: right;
-    padding-right: 20px; }
-  
-  .dataTableFirst {
-    height: 50px;
-    font-size: small;
-    border: 1px solid #d6cdcd top bottom;
-    text-align: left;
-    padding-left: 20px; }
-  
-  .spanRowTable {
-    height: 50px;
-    font-size: small;
-    border: 1px solid #d6cdcd top bottom;
-    font-weight: bold; }
-  
-  .mainFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 20px; }
-  
-  .box {
-    width: 250px;
-    height: 65px;
-    background-color: white;
-    border: 1px solid black;
-    position: relative; }
-  
-  .box p {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 0 !important;
-    font-size: 12px;
-    padding-left: 5px; }
-  
-  tr:nth-child(odd) {
-    background: #f6f6f6; }
-  </style></head><div><div class="headerFlex"><p class="numberHeading">CLAIM NUMBER: NIA93238328</p><p class="generateReport">REPORT GENERATED AT: 16 December 2021 17:12</p></div><div class="mainContantDiv"><div class="flexableDiv"><img class="imageLogo" src="https://s3.ap-south-1.amazonaws.com/gmail-public/gmail_website/gmail-logo.png" alt=""><div><h2> Technologies</h2><p>Address:  Delhi</p><p>Phone Number: 1123423424</p><p>Email: support@gmail.io</p></div></div><div class="codeImageBox"><img class="codeImage" src="data:image/png;base64,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" alt=""><p>Scan & Download</p></div></div></div><div><h1 class="headingReport">VEHICLE ORDER REPORT </h1><div class="policyDetail"><h2 class="headPolicy">Insured Details </h2><div class="policyMainDiv"><div class="itemDiv"><p class="nameDetail">Insured name</p><p class="valueIeam">John Miles</p></div><div class="itemDiv"><p class="nameDetail">Phone Number</p><p class="valueIeam">7012368494</p></div><div class="itemDiv"><p class="nameDetail">Policy Number</p><p class="valueIeam">E1234</p></div><div class="itemDiv"><p class="nameDetail">Policy start Date</p><p class="valueIeam">Wed Oct 13 2021</p></div><div class="itemDiv"><p class="nameDetail">Policy End Date</p><p class="valueIeam">Thu Oct 28 2021</p></div><div class="itemDiv"><p class="nameDetail">Address</p><p class="valueIeam">802-804, 8th Floor,Vijaya Building, Barakhamba Road, New Delhi 110001</p></div></div></div><div class="policyDetail"><h2 class="headPolicy">Vehicle Details</h2><div class="policyMainDiv"><div class="itemDiv"><p class="nameDetail">Registration Number</p><p class="valueIeam">3434343434</p></div><div class="itemDiv"><p class="nameDetail">Make</p><p class="valueIeam">-</p></div><div class="itemDiv"><p class="nameDetail">Model</p><p class="valueIeam">-</p></div><div class="itemDiv"><p class="nameDetail">Manufacturing Year</p><p class="valueIeam">2000</p></div><div class="itemDiv"><p class="nameDetail">Variant</p><p class="valueIeam">-</p></div><div class="itemDiv"><p class="nameDetail">Registration Date</p><p class="valueIeam">Thu Dec 16 2021</p></div><div class="itemDiv"><p class="nameDetail">Chassis Number</p><p class="valueIeam">-</p></div><div class="itemDiv"><p class="nameDetail">Engine Number</p><p class="valueIeam">28217 KMS</p></div><div class="itemDiv"><p class="nameDetail">Odometer Reading</p><p class="valueIeam">28217 KMS</p></div><div class="itemDiv"><p class="nameDetail">Vehicle Register As</p><p class="valueIeam">Private</p></div><div class="itemDiv"><p class="nameDetail">Cubic Capacity</p><p class="valueIeam">1198</p></div><div class="itemDiv"><p class="nameDetail">Color</p><p class="valueIeam">Red</p></div><div class="itemDiv"><p class="nameDetail">Hypothecation</p><p class="valueIeam">ICICI Bank</p></div><div class="itemDiv"><p class="nameDetail">Vehicle Registration Class</p><p class="valueIeam">LMVNT/TW/CV/MISC</p></div><div class="itemDiv"><p class="nameDetail">Seating Capacity</p><p class="valueIeam">5</p></div></div></div><p>Please find the below tentative estimation for the subject vehicle as per the visible damages found on the vehicle .Any further replacement / repair of part required during the course of repair shall be verified and included in the estimation. We request you to take prior approval from the insurer for all kept open part approval, if any.</p><b>Important Note:</b><ul><li>This Vehicle Repair Order is issued based on Oriental Insurance Company Limited's preliminary inspection/survey of your vehicle.</li><li>Please note that this is not an approval of your claim or an admission of Oriental Insurance Company Limited's liability.</li><li>The final approval is when we issue a Vehicle Delivery Order after completely reviewing your documents (like a valid Registration Certificate, Driving Licence, Fitness</li><li>Certificate (in case of a commercial vehicle) & more) and subject to your adherence to policy terms and conditions.</li></ul><b>Note:</b><ul><li>If there is a dismantling of the vehicle or change of any parts, you are required to produce the old parts for the inspection of the Oriental Insurance Company Limited' officials. The final binding decision of the Oriental Insurance Company Limited whether the repair or replacement of any parts was necessary & is approved under the claim will be provided post this inspection.</li><li>In case there is a major damage and the claim is settled & agreed by you on ‘Net of salvage’ basis, the vehicle becomes the Company’s property.</li></ul><div class="policyDetail"><h2 class="headPolicy">Cost Assessment</h2><div class="policyMainDiv"><table class="tableBox"><tr class="rowTable"><th class="titleTable">Parts</th><th class="titleTable">Part Group</th><th class="titleTable">Material Type</th><th class="titleTable">Part Number</th><th class="titleTable">Operation</th><th class="titleTable">HSN/SAC Code</th><th class="titleTable">Quantity</th><th class="titleTable">Part Base Amount</th><th class="titleTable">Tax On Part</th><th class="titleTable">Part Amount With Tax </th><th class="titleTable">Depreciation On Parts</th><th class="titleTable">Painting Cost</th><th class="titleTable">Repair/Dent Beating Cost</th><th class="titleTable">Removal Refitting Cost</th><th class="titleTable">Total Amount</th></tr><tr class="rowTable"><td class="dataTable">Front Bumper</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Plastic</td><td class="dataTable">30</td><td class="dataTable">replace</td><td class="dataTable">3</td><td class="dataTable">1</td><td class="dataTable">₹2100</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹750</td><td class="dataTable">₹99</td><td class="dataTable">₹500</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Rear Bumper</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Plastic</td><td class="dataTable">90</td><td class="dataTable">replace</td><td class="dataTable">9</td><td class="dataTable">1</td><td class="dataTable">₹2500</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹799</td><td class="dataTable">₹0</td><td class="dataTable">₹599</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Right Front Door</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Metal</td><td class="dataTable">110</td><td class="dataTable">repair</td><td class="dataTable">11</td><td class="dataTable">1</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹1799</td><td class="dataTable">₹2100</td><td class="dataTable">₹499</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Right Quarter Panel</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Plastic</td><td class="dataTable">120</td><td class="dataTable">repair</td><td class="dataTable">12</td><td class="dataTable">1</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹100</td><td class="dataTable">₹199</td><td class="dataTable">₹50</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Right Rear Door</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Metal</td><td class="dataTable">130</td><td class="dataTable">replace</td><td class="dataTable">13</td><td class="dataTable">1</td><td class="dataTable">₹5100</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹1700</td><td class="dataTable">₹0</td><td class="dataTable">₹950</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Bonnet</td><td class="dataTable">Glass Parts</td><td class="dataTable">Plastic</td><td class="dataTable">20</td><td class="dataTable">repair</td><td class="dataTable">2</td><td class="dataTable">3</td><td class="dataTable">₹1900</td><td class="dataTable">₹380</td><td class="dataTable">₹2280</td><td class="dataTable">₹1043.75</td><td class="dataTable">₹750</td><td class="dataTable">₹1250</td><td class="dataTable">₹500</td><td class="dataTable">₹2280</td></tr><tr class="rowTable"><td class="dataTable">Boot</td><td class="dataTable">Interior Parts</td><td class="dataTable">Fiber</td><td class="dataTable">40</td><td class="dataTable">replace</td><td class="dataTable">4</td><td class="dataTable">1</td><td class="dataTable">₹2500</td><td class="dataTable">₹500</td><td class="dataTable">₹3000</td><td class="dataTable">₹837.5</td><td class="dataTable">₹700</td><td class="dataTable">₹0</td><td class="dataTable">₹449</td><td class="dataTable">₹3000</td></tr><tr class="rowTable"><td class="dataTable">Grill</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Metal</td><td class="dataTable">50</td><td class="dataTable">repair</td><td class="dataTable">5</td><td class="dataTable">1</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹100</td><td class="dataTable">₹249</td><td class="dataTable">₹199</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Left Headlight</td><td class="dataTable">Glass Parts</td><td class="dataTable">Glass</td><td class="dataTable">15</td><td class="dataTable">replace</td><td class="dataTable">1500</td><td class="dataTable">1</td><td class="dataTable">₹1499</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹250</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Left Quarter Panel</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Fiber</td><td class="dataTable">70</td><td class="dataTable">replace</td><td class="dataTable">7</td><td class="dataTable">1</td><td class="dataTable">₹500</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹129</td><td class="dataTable">₹0</td><td class="dataTable">₹150</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Left Tail Light</td><td class="dataTable">Glass Parts</td><td class="dataTable">Glass</td><td class="dataTable">80</td><td class="dataTable">replace</td><td class="dataTable">8</td><td class="dataTable">1</td><td class="dataTable">₹2200</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹199</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Boot</td><td class="dataTable">Glass Parts</td><td class="dataTable">Plastic</td><td class="dataTable">40</td><td class="dataTable">repair</td><td class="dataTable">2</td><td class="dataTable">3</td><td class="dataTable">₹1900</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹750</td><td class="dataTable">₹1250</td><td class="dataTable">₹500</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Grill</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Metal</td><td class="dataTable">50</td><td class="dataTable">replace</td><td class="dataTable">5</td><td class="dataTable">3</td><td class="dataTable">₹1100</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹100</td><td class="dataTable">₹0</td><td class="dataTable">₹199</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Right Rear Door</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Metal</td><td class="dataTable">130</td><td class="dataTable">replace</td><td class="dataTable">13</td><td class="dataTable">2</td><td class="dataTable">₹5100</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹1700</td><td class="dataTable">₹0</td><td class="dataTable">₹950</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Right Front Door</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Metal</td><td class="dataTable">110</td><td class="dataTable"></td><td class="dataTable">11</td><td class="dataTable">2</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹1799</td><td class="dataTable">₹2100</td><td class="dataTable">₹499</td><td class="dataTable">₹0</td></tr><tr class="rowTable"><td class="dataTable">Left Front Door Glass</td><td class="dataTable">Exterior Parts</td><td class="dataTable">Glass</td><td class="dataTable">14</td><td class="dataTable"></td><td class="dataTable">1400</td><td class="dataTable">1</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹0</td><td class="dataTable">₹150</td><td class="dataTable">₹0</td><td class="dataTable">₹149</td><td class="dataTable">₹0</td></tr><tr><td class="spanRowTable" colspan="14">Total Cost(With Tax) </td><td class="spanRowTable">&#x20B9;32150</td></tr></table></div></div><div class="policyDetail"><h2 class="headPolicy">Cost With Tax</h2><div class="policyMainDiv"><table class="tableBox"><tr class="rowTable"><th class="titleTable">Type Of Charge</th><th class="titleTable">Amount</th><th class="titleTable">Description</th><th class="titleTable">Tax Amount</th><th class="titleTable">Total Amount</th></tr><tr class="rowTable"><td class="dataTable">Repair Cost Tax</td><td class="dataTable">₹7247</td><td class="dataTable">-</td><td class="dataTable">₹9421.1</td><td class="dataTable">₹9421.1</td></tr><tr class="rowTable"><td class="dataTable">Paint Material Cost Tax</td><td class="dataTable">₹2831.5</td><td class="dataTable">-</td><td class="dataTable">₹5521.44</td><td class="dataTable">₹5521.44</td></tr><tr class="rowTable"><td class="dataTable">Paint Labour Cost Tax</td><td class="dataTable">₹8494.5</td><td class="dataTable">-</td><td class="dataTable">₹11042.86</td><td class="dataTable">₹11042.86</td></tr><tr class="rowTable"><td class="dataTable">Refitting Cost Tax</td><td class="dataTable">₹6642</td><td class="dataTable">-</td><td class="dataTable">₹8634.6</td><td class="dataTable">₹8634.6</td></tr><tr class="rowTable"><td class="spanRowTable" colspan="4">Total Cost</td><td class="spanRowTable">&#x20B9;32150</td></tr></table></div></div><div class="policyDetail"><h2 class="headPolicy">Additional Charges</h2><div class="policyMainDiv"><table class="tableBox"><tr class="rowTable"><th class="dataTableFirst">Type Of Charge</th><th class="dataTableSec">Charges</th></tr><tr class="rowTable"><td class="dataTableFirst">Charge 1</td><td class="dataTableSec">₹0</td></tr><tr class="rowTable"><td class="dataTableFirst">Charge 2</td><td class="dataTableSec">₹0</td></tr><tr><td class="dataTableFirst">Total Cost</td><td class="dataTableSec"> &#x20B9;32150</td></tr></table></div></div><div class="policyDetail"><h2 class="headPolicy">Insured Share</h2><div class="policyMainDiv"><table class="tableBox"><tr class="rowTable"><th class="dataTableFirst">Insured Share Name</th><th class="dataTableSec">Amount</th></tr><tr class="rowTable"><td class="dataTableFirst">Other expenses</td><td class="dataTableSec">₹1520</td></tr></table></div></div><div class="policyDetail"><h2 class="headPolicy">Claim Assessment Summary</h2><div class="policyMainDiv"><table class="tableBox"><tr class="rowTable"><th class="dataTableFirst">Final Calculation</th><th class="dataTableSec">Charges</th></tr><tr class="rowTable"><td class="dataTableFirst">Insurer Liability</td><td class="dataTableSec">₹38018.75</td></tr><tr class="rowTable"><td class="dataTableFirst">Insured Share</td><td class="dataTableSec">₹1520.00</td></tr></table></div></div><div class="secondTable"><h2 class="headPolicy"> Assessment Remark</h2><p>-</p></div><div class="mainFooter"><div><div class="box"></div><p> Assesor&apos;s Name: Jakson </p></div><div><div class="box"></div><p> Authorised Signatory: JP Shukla </p></div></div></div>
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to xClaim</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap">
+    <style type="text/css">
+        html {
+            -webkit-print-color-adjust: exact;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 95%;
+            margin: 0 auto;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .headerFlex {
+            display: flex;
+            justify-content: space-between;
+            background-color: #08b89a !important;
+        }
+        
+        .generateReport {
+            padding-right: 10px;
+            color: white;
+        }
+        
+        .numberHeading {
+            padding-left: 10px;
+            color: white;
+        }
+        
+        .imageLogo {
+            width: 200px;
+            height: 50px;
+        }
+        
+        .mainContantDiv {
+            display: flex;
+            background-color: #f6f6f6 !important;
+            height: 175px;
+        }
+        
+        .flexableDiv {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+        }
+        
+        .phoneEmail {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .phoneEmail p {
+            line-height: 0px;
+        }
+        
+        .emailHanlde {
+            margin-left: 10px;
+        }
+        
+        .addressHanlde {
+            line-height: 0px;
+        }
+        
+        .codeImageBox {
+            width: 20%;
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .codeImage {
+            width: 100px;
+            height: 100px;
+            margin-top: 30px;
+        }
+        
+        .scanPara {
+            margin-top: 0 !important;
+        }
+        
+        .headingReport {
+            text-align: center;
+        }
+        
+        .policyDetail {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .headPolicy {
+            color: #08b89a;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+        
+        .policyMainDiv {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        
+        .itemDiv {
+            margin: 0 10px;
+            width: 18%;
+        }
+        
+        .nameDetail {
+            color: gray;
+            line-height: 0px;
+        }
+        
+        .tableBox {
+            border: 1px solid #d6cdcd;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .titleTable {
+            height: 50px;
+            font-size: small;
+            border: 1px solid #d6cdcd top bottom;
+            text-align: left;
+            padding-left: 5px;
+        }
+        
+        .dataTable {
+            height: 50px;
+            font-size: small;
+            border: 1px solid #d6cdcd top bottom;
+            padding-left: 5px;
+        }
+        
+        .dataTableSec {
+            height: 50px;
+            font-size: small;
+            border: 1px solid #d6cdcd top bottom;
+            text-align: right;
+            padding-right: 20px;
+        }
+        
+        .dataTableFirst {
+            height: 50px;
+            font-size: small;
+            border: 1px solid #d6cdcd top bottom;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .spanRowTable {
+            height: 50px;
+            font-size: small;
+            border: 1px solid #d6cdcd top bottom !important;
+            font-weight: bold;
+        }
+        
+        .mainFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .box {
+            width: 250px;
+            height: 65px;
+            background-color: white !important;
+            border: 1px solid black;
+            position: relative;
+        }
+        
+        .box p {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 0 !important;
+            font-size: 12px;
+            padding-left: 5px;
+        }
+        
+        tr:nth-child(odd) {
+            background: #f6f6f6 !important;
+        }
+    </style>
+</head>
+<div>
+    <div class="headerFlex">
+        <p class="numberHeading">CLAIM NUMBER: NIA93238328</p>
+        <p class="generateReport">REPORT GENERATED AT: 16 December 2021 17:12</p>
+    </div>
+    <div class="mainContantDiv">
+        <div class="flexableDiv"><img class="imageLogo" src="https://s3.ap-south-1.amazonaws.com/gmail-public/gmail_website/gmail-logo.png" alt="">
+            <div>
+                <h2> Technologies</h2>
+                <p>Address: Delhi</p>
+                <p>Phone Number: 1123423424</p>
+                <p>Email: support@gmail.io</p>
+            </div>
+        </div>
+        <div class="codeImageBox"><img class="codeImage" src="data:image/png;base64,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"
+                alt="">
+            <p>Scan & Download</p>
+        </div>
+    </div>
+</div>
+<div>
+    <h1 class="headingReport">VEHICLE ORDER REPORT </h1>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Insured Details </h2>
+        <div class="policyMainDiv">
+            <div class="itemDiv">
+                <p class="nameDetail">Insured name</p>
+                <p class="valueIeam">John Miles</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Phone Number</p>
+                <p class="valueIeam">7012368494</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Policy Number</p>
+                <p class="valueIeam">E1234</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Policy start Date</p>
+                <p class="valueIeam">Wed Oct 13 2021</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Policy End Date</p>
+                <p class="valueIeam">Thu Oct 28 2021</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Address</p>
+                <p class="valueIeam">802-804, 8th Floor,Vijaya Building, Barakhamba Road, New Delhi 110001</p>
+            </div>
+        </div>
+    </div>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Vehicle Details</h2>
+        <div class="policyMainDiv">
+            <div class="itemDiv">
+                <p class="nameDetail">Registration Number</p>
+                <p class="valueIeam">3434343434</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Make</p>
+                <p class="valueIeam">-</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Model</p>
+                <p class="valueIeam">-</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Manufacturing Year</p>
+                <p class="valueIeam">2000</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Variant</p>
+                <p class="valueIeam">-</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Registration Date</p>
+                <p class="valueIeam">Thu Dec 16 2021</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Chassis Number</p>
+                <p class="valueIeam">-</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Engine Number</p>
+                <p class="valueIeam">28217 KMS</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Odometer Reading</p>
+                <p class="valueIeam">28217 KMS</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Vehicle Register As</p>
+                <p class="valueIeam">Private</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Cubic Capacity</p>
+                <p class="valueIeam">1198</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Color</p>
+                <p class="valueIeam">Red</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Hypothecation</p>
+                <p class="valueIeam">ICICI Bank</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Vehicle Registration Class</p>
+                <p class="valueIeam">LMVNT/TW/CV/MISC</p>
+            </div>
+            <div class="itemDiv">
+                <p class="nameDetail">Seating Capacity</p>
+                <p class="valueIeam">5</p>
+            </div>
+        </div>
+    </div>
+    <p>Please find the below tentative estimation for the subject vehicle as per the visible damages found on the vehicle .Any further replacement / repair of part required during the course of repair shall be verified and included in the estimation. We
+        request you to take prior approval from the insurer for all kept open part approval, if any.</p><b>Important Note:</b>
+    <ul>
+        <li>This Vehicle Repair Order is issued based on Oriental Insurance Company Limited's preliminary inspection/survey of your vehicle.</li>
+        <li>Please note that this is not an approval of your claim or an admission of Oriental Insurance Company Limited's liability.</li>
+        <li>The final approval is when we issue a Vehicle Delivery Order after completely reviewing your documents (like a valid Registration Certificate, Driving Licence, Fitness</li>
+        <li>Certificate (in case of a commercial vehicle) & more) and subject to your adherence to policy terms and conditions.</li>
+    </ul><b>Note:</b>
+    <ul>
+        <li>If there is a dismantling of the vehicle or change of any parts, you are required to produce the old parts for the inspection of the Oriental Insurance Company Limited' officials. The final binding decision of the Oriental Insurance Company Limited
+            whether the repair or replacement of any parts was necessary & is approved under the claim will be provided post this inspection.</li>
+        <li>In case there is a major damage and the claim is settled & agreed by you on ‘Net of salvage’ basis, the vehicle becomes the Company’s property.</li>
+    </ul>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Cost Assessment</h2>
+        <div class="policyMainDiv">
+            <table class="tableBox">
+                <tr class="rowTable">
+                    <th class="titleTable">Parts</th>
+                    <th class="titleTable">Part Group</th>
+                    <th class="titleTable">Material Type</th>
+                    <th class="titleTable">Part Number</th>
+                    <th class="titleTable">Operation</th>
+                    <th class="titleTable">HSN/SAC Code</th>
+                    <th class="titleTable">Quantity</th>
+                    <th class="titleTable">Part Base Amount</th>
+                    <th class="titleTable">Tax On Part</th>
+                    <th class="titleTable">Part Amount With Tax </th>
+                    <th class="titleTable">Depreciation On Parts</th>
+                    <th class="titleTable">Painting Cost</th>
+                    <th class="titleTable">Repair/Dent Beating Cost</th>
+                    <th class="titleTable">Removal Refitting Cost</th>
+                    <th class="titleTable">Total Amount</th>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Front Bumper</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Plastic</td>
+                    <td class="dataTable">30</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">3</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹2100</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹750</td>
+                    <td class="dataTable">₹99</td>
+                    <td class="dataTable">₹500</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Rear Bumper</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Plastic</td>
+                    <td class="dataTable">90</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">9</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹2500</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹799</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹599</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Right Front Door</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Metal</td>
+                    <td class="dataTable">110</td>
+                    <td class="dataTable">repair</td>
+                    <td class="dataTable">11</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹1799</td>
+                    <td class="dataTable">₹2100</td>
+                    <td class="dataTable">₹499</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Right Quarter Panel</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Plastic</td>
+                    <td class="dataTable">120</td>
+                    <td class="dataTable">repair</td>
+                    <td class="dataTable">12</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹100</td>
+                    <td class="dataTable">₹199</td>
+                    <td class="dataTable">₹50</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Right Rear Door</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Metal</td>
+                    <td class="dataTable">130</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">13</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹5100</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹1700</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹950</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Bonnet</td>
+                    <td class="dataTable">Glass Parts</td>
+                    <td class="dataTable">Plastic</td>
+                    <td class="dataTable">20</td>
+                    <td class="dataTable">repair</td>
+                    <td class="dataTable">2</td>
+                    <td class="dataTable">3</td>
+                    <td class="dataTable">₹1900</td>
+                    <td class="dataTable">₹380</td>
+                    <td class="dataTable">₹2280</td>
+                    <td class="dataTable">₹1043.75</td>
+                    <td class="dataTable">₹750</td>
+                    <td class="dataTable">₹1250</td>
+                    <td class="dataTable">₹500</td>
+                    <td class="dataTable">₹2280</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Boot</td>
+                    <td class="dataTable">Interior Parts</td>
+                    <td class="dataTable">Fiber</td>
+                    <td class="dataTable">40</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">4</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹2500</td>
+                    <td class="dataTable">₹500</td>
+                    <td class="dataTable">₹3000</td>
+                    <td class="dataTable">₹837.5</td>
+                    <td class="dataTable">₹700</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹449</td>
+                    <td class="dataTable">₹3000</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Grill</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Metal</td>
+                    <td class="dataTable">50</td>
+                    <td class="dataTable">repair</td>
+                    <td class="dataTable">5</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹100</td>
+                    <td class="dataTable">₹249</td>
+                    <td class="dataTable">₹199</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Left Headlight</td>
+                    <td class="dataTable">Glass Parts</td>
+                    <td class="dataTable">Glass</td>
+                    <td class="dataTable">15</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">1500</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹1499</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹250</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Left Quarter Panel</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Fiber</td>
+                    <td class="dataTable">70</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">7</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹500</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹129</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹150</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Left Tail Light</td>
+                    <td class="dataTable">Glass Parts</td>
+                    <td class="dataTable">Glass</td>
+                    <td class="dataTable">80</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">8</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹2200</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹199</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Boot</td>
+                    <td class="dataTable">Glass Parts</td>
+                    <td class="dataTable">Plastic</td>
+                    <td class="dataTable">40</td>
+                    <td class="dataTable">repair</td>
+                    <td class="dataTable">2</td>
+                    <td class="dataTable">3</td>
+                    <td class="dataTable">₹1900</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹750</td>
+                    <td class="dataTable">₹1250</td>
+                    <td class="dataTable">₹500</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Grill</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Metal</td>
+                    <td class="dataTable">50</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">5</td>
+                    <td class="dataTable">3</td>
+                    <td class="dataTable">₹1100</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹100</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹199</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Right Rear Door</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Metal</td>
+                    <td class="dataTable">130</td>
+                    <td class="dataTable">replace</td>
+                    <td class="dataTable">13</td>
+                    <td class="dataTable">2</td>
+                    <td class="dataTable">₹5100</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹1700</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹950</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Right Front Door</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Metal</td>
+                    <td class="dataTable">110</td>
+                    <td class="dataTable"></td>
+                    <td class="dataTable">11</td>
+                    <td class="dataTable">2</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹1799</td>
+                    <td class="dataTable">₹2100</td>
+                    <td class="dataTable">₹499</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Left Front Door Glass</td>
+                    <td class="dataTable">Exterior Parts</td>
+                    <td class="dataTable">Glass</td>
+                    <td class="dataTable">14</td>
+                    <td class="dataTable"></td>
+                    <td class="dataTable">1400</td>
+                    <td class="dataTable">1</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹150</td>
+                    <td class="dataTable">₹0</td>
+                    <td class="dataTable">₹149</td>
+                    <td class="dataTable">₹0</td>
+                </tr>
+                <tr>
+                    <td class="spanRowTable" colspan="14">Total Cost(With Tax) </td>
+                    <td class="spanRowTable">&#x20B9;32150</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Cost With Tax</h2>
+        <div class="policyMainDiv">
+            <table class="tableBox">
+                <tr class="rowTable">
+                    <th class="titleTable">Type Of Charge</th>
+                    <th class="titleTable">Amount</th>
+                    <th class="titleTable">Description</th>
+                    <th class="titleTable">Tax Amount</th>
+                    <th class="titleTable">Total Amount</th>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Repair Cost Tax</td>
+                    <td class="dataTable">₹7247</td>
+                    <td class="dataTable">-</td>
+                    <td class="dataTable">₹9421.1</td>
+                    <td class="dataTable">₹9421.1</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Paint Material Cost Tax</td>
+                    <td class="dataTable">₹2831.5</td>
+                    <td class="dataTable">-</td>
+                    <td class="dataTable">₹5521.44</td>
+                    <td class="dataTable">₹5521.44</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Paint Labour Cost Tax</td>
+                    <td class="dataTable">₹8494.5</td>
+                    <td class="dataTable">-</td>
+                    <td class="dataTable">₹11042.86</td>
+                    <td class="dataTable">₹11042.86</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTable">Refitting Cost Tax</td>
+                    <td class="dataTable">₹6642</td>
+                    <td class="dataTable">-</td>
+                    <td class="dataTable">₹8634.6</td>
+                    <td class="dataTable">₹8634.6</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="spanRowTable" colspan="4">Total Cost</td>
+                    <td class="spanRowTable">&#x20B9;32150</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Additional Charges</h2>
+        <div class="policyMainDiv">
+            <table class="tableBox">
+                <tr class="rowTable">
+                    <th class="dataTableFirst">Type Of Charge</th>
+                    <th class="dataTableSec">Charges</th>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTableFirst">Charge 1</td>
+                    <td class="dataTableSec">₹0</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTableFirst">Charge 2</td>
+                    <td class="dataTableSec">₹0</td>
+                </tr>
+                <tr>
+                    <td class="dataTableFirst">Total Cost</td>
+                    <td class="dataTableSec"> &#x20B9;32150</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Insured Share</h2>
+        <div class="policyMainDiv">
+            <table class="tableBox">
+                <tr class="rowTable">
+                    <th class="dataTableFirst">Insured Share Name</th>
+                    <th class="dataTableSec">Amount</th>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTableFirst">Other expenses</td>
+                    <td class="dataTableSec">₹1520</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="policyDetail">
+        <h2 class="headPolicy">Claim Assessment Summary</h2>
+        <div class="policyMainDiv">
+            <table class="tableBox">
+                <tr class="rowTable">
+                    <th class="dataTableFirst">Final Calculation</th>
+                    <th class="dataTableSec">Charges</th>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTableFirst">Insurer Liability</td>
+                    <td class="dataTableSec">₹38018.75</td>
+                </tr>
+                <tr class="rowTable">
+                    <td class="dataTableFirst">Insured Share</td>
+                    <td class="dataTableSec">₹1520.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="secondTable">
+        <h2 class="headPolicy"> Assessment Remark</h2>
+        <p>-</p>
+    </div>
+    <div class="mainFooter">
+        <div>
+            <div class="box"></div>
+            <p> Assesor&apos;s Name: Jakson </p>
+        </div>
+        <div>
+            <div class="box"></div>
+            <p> Authorised Signatory: JP Shukla </p>
+        </div>
+    </div>
+</div>
